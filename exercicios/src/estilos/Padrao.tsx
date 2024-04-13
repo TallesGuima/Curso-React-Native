@@ -9,5 +9,12 @@ export default StyleSheet.create({
         borderColor: '#222',
         fontSize: 24,
         fontWeight: 'bold'
+    },
+    textoGrande: {
+        fontSize:36,
+    },
+    textoVermelho: {
+        fontSize:36,
+        color: '#FF0000',
     }
 })
