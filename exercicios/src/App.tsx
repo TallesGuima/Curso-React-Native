@@ -3,6 +3,18 @@ import {View, Text, StyleSheet} from 'react-native';
 import Simples from "./components/Simples";
 import Membro from "./components/relacao/Membro";
 import Familia from "./components/relacao/Familia";
+import FamiliaMaps from "./components/relacao/FamiliaJsonMaps";
+import UsuarioLogado from "./components/UsuarioLogado";
+import Botao from "./components/Botao";
+import FamiliaJson from "./components/relacao/FamiliaJson";
+
+
+const Familia01 = [
+  {"nome": "Andresa", "sobreNome": "Ap. Guimarães Garcia"},
+  {"nome": "Daniel", "sobreNome": "Neves Garcia"},
+  {"nome": "Talles", "sobreNome": "Guimarães Neves Garcia"},
+  {"nome": "Lucas", "sobreNome": "Guimarães Neves Garcia"}
+]
 
 
 //Adiciona um membro
@@ -30,23 +42,31 @@ export default class App extends Component {
   render(){
     return (
       <View style={estilos.container}>
-        {/*<Text style={estilos.fonte}>Olá mundo</Text>
-          <Simples valor="Programando em react-native"/>*/}
+        {/* <Text style={estilos.fonte}>Olá mundo</Text>
+          <Simples valor="Programando em react-native"/> */}
       
-        {/*<Frag titulo="Titulo" 
-            subTitulo="sub Titulo"  />*/}
+        {/* <Frag titulo="Titulo" 
+            subTitulo="sub Titulo"  /> */}
               
-        {/*<Parimpar numero={11} />*/}
+        {/* <Parimpar numero={11} /> */}
 
-        <Familia>
+        {/* <Familia>
           <Membro key={0} nome="Talles" sobreNome="Guimarães Neves Garcia" />
           {setMembro("Lucas", "Guimarães Neves Garcia", 1)}
           {setMembros(["Andresa", "Ap. Guimarães Garcia" 
                       , "Daniel", "Neves Garcia"
                       , "Mercia", "Neves"], 2)}
-        </Familia>
- 
+        </Familia> */}
+        {/* <FamiliaJson membros={Familia01}/> */}
+        {/* <FamiliaMaps membros={Familia01}/> */}
 
+        {/* <UsuarioLogado usuario={ {"nome":"teste", "email":"teste@teste.com"} }/>
+        <UsuarioLogado usuario={ {"nome":"teste 2"} }/>
+        <UsuarioLogado usuario={ {"email":"warley@gmail.com"} }/>
+        <UsuarioLogado usuario={ {} }/>
+        <UsuarioLogado usuario={ null }/>  */}
+
+        <Botao />
       </View>
     );
   }
