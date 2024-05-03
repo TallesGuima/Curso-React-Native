@@ -16,5 +16,8 @@ export default StyleSheet.create({
     textoVermelho: {
         fontSize:36,
         color: '#FF0000',
+    },
+    separator: {
+        marginVertical: 10
     }
 })

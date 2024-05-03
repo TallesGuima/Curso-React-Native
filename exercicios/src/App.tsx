@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 import Simples from "./components/Simples";
 import Membro from "./components/relacao/Membro";
 import Familia from "./components/relacao/Familia";
@@ -7,6 +7,8 @@ import FamiliaMaps from "./components/relacao/FamiliaJsonMaps";
 import UsuarioLogado from "./components/UsuarioLogado";
 import Botao from "./components/Botao";
 import FamiliaJson from "./components/relacao/FamiliaJson";
+import Evento from "./components/Eventos";
+
 
 
 const Familia01 = [
@@ -37,7 +39,6 @@ function setMembros(nome_sobreNome: string[], key: number): JSX.Element[]{
   return membros;
 }
 
-
 export default class App extends Component {
   render(){
     return (
@@ -66,8 +67,9 @@ export default class App extends Component {
         <UsuarioLogado usuario={ {} }/>
         <UsuarioLogado usuario={ null }/>  */}
 
-        <Botao />
-      </View>
+      <Botao /> 
+
+      </View> 
     );
   }
 }
@@ -80,7 +82,7 @@ const estilos= StyleSheet.create({
   },
   fonte: {
     fontSize: 40,
-  }
+  },
 })
 
 

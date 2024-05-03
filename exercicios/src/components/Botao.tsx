@@ -1,31 +1,36 @@
 import React from "react";
-import { Button } from "react-native";
+import { Button, Text } from "react-native";
+import Separador from "./Separador";
+import Padrao from "../estilos/Padrao";
 
 
-export default(props: any) => {
-    function executar(){
-        console.warn('Botão acionado')
+class Botao extends React.Component {
+    state = {
+        numero: 0
     }
 
-    return (
-        <>
-        
-        <Button 
-            title="Executar"
-            onPress={executar}    
-        />
+    render() {
+        return (
+            <>
+            <Button 
+                title="Adicionar 1"
+                onPress={() => 
+                    this.setState({ numero: this.state.numero + 1 })}
+            />
 
-        <Button 
-            title="Executar 2"
-            onPress={function(){console.warn('Exec 2')}}    
-        />
+            <Separador />
 
-        <Button
-            title="Executar 3"
-            onPress={() => console.warn('Exec 3')}
-        />
+            <Button 
+                title="Subtrair 1"
+                onPress={() => 
+                    this.setState({ numero: this.state.numero - 1 })}
+            />
 
-
-        </>
-    )
+            <Text style={Padrao.textoGrande}>{this.state.numero}</Text>
+            </>
+        )
+    }
 }
+
+
+export default Botao;
